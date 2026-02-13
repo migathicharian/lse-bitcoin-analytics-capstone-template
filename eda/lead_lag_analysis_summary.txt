@@ -1,0 +1,27 @@
+
+================================================================================
+NO TOKEN FLOW vs BTC: LEAD-LAG ANALYSIS SUMMARY
+================================================================================
+
+OPTIMAL LAG:
+  • Best lag: 0.0 days
+  • Correlation at optimal lag: 0.2310
+  • P-value: 0.0003
+  • Sample size: 242.0
+
+INTERPRETATION:
+  → SIMULTANEOUS MOVEMENT
+  → NO token flow and BTC change together
+  → No clear lead-lag relationship
+
+CORRELATION STRENGTH:
+  • Daily: r=0.2108 (p=0.0011) ✓ SIGNIFICANT
+  • At optimal lag: r=0.2310
+
+KEY FINDING:
+  → Bearish political sentiment (NO token buying) shows
+    statistically significant correlation with Bitcoin price
+  → This relationship is contemporaneous
+  → Can be used as a coincident indicator
+
+================================================================================

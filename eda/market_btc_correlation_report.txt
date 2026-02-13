@@ -1,0 +1,30 @@
+
+================================================================================
+MARKET CREATION ↔ BTC PRICE: DETAILED ANALYSIS
+================================================================================
+
+BASIC STATISTICS:
+  • Total markets: 11,603
+  • Date range: 2021-04-09 21:50:02 to 2025-12-09 23:00:45
+  • Avg markets/day: 17.74
+  • Max markets/day: 172
+  
+BTC STATISTICS:
+  • Avg BTC price: $88,056
+  • Min BTC price: $19,339
+  • Max BTC price: $124,824
+
+CORRELATION STRENGTH:
+  • Monthly correlation: 0.7679
+
+LEAD-LAG RELATIONSHIP:
+  • Optimal lag: -27.0 days
+  • Correlation at lag: -0.0897
+  • Interpretation: Markets lead BTC
+
+SPIKE DAYS:
+  • Spike days identified: 56
+  • Avg BTC on spikes: $75,482
+  • Avg BTC normal: $74,704
+
+================================================================================
