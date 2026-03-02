@@ -24,28 +24,28 @@ Step 3 : Theme of question
 
 We first work on Tariff<br>
 Search on list of question with<br>
-- De-escalation (110 markets) — deal, pause, reduce, agreement
-- Escalation — impose, increase, new tariff
+- De-escalation (110 markets) — deal, pause, reduce, agreement<br>
+- Escalation — impose, increase, new tariff<br>
 
-=== NET SIGNAL correlation with btc_change daily (de-escalation - escalation) ===
-  Lag  1 days: +0.163
-  Lag  3 days: +0.197
-  Lag  5 days: +0.317
-  Lag  7 days: +0.349
-  Lag 10 days: +0.517
-  Lag 14 days: +0.534
+=== NET SIGNAL correlation with btc_change daily (de-escalation - escalation) ===<br>
+  Lag  1 days: +0.163<br>
+  Lag  3 days: +0.197<br>
+  Lag  5 days: +0.317<br>
+  Lag  7 days: +0.349<br>
+  Lag 10 days: +0.517<br>
+  Lag 14 days: +0.534<br>
 
 
-Story behind:
+Story behind:<br>
 
-Trump announces/escalates tariffs
-→ Escalation odds rise on Polymarket
-→ Net signal goes negative
-→ Risk-off sentiment builds
-→ Bitcoin falls 10-14 days later
+Trump announces/escalates tariffs<br>
+→ Escalation odds rise on Polymarket<br>
+→ Net signal goes negative<br>
+→ Risk-off sentiment builds<br>
+→ Bitcoin falls 10-14 days later<br>
 
-Trump pauses/reduces tariffs
-→ De-escalation odds rise on Polymarket
-→ Net signal goes positive  
-→ Risk-on sentiment returns
-→ Bitcoin rises 10-14 days later
+Trump pauses/reduces tariffs<br>
+→ De-escalation odds rise on Polymarket<br>
+→ Net signal goes positive  <br>
+→ Risk-on sentiment returns<br>
+→ Bitcoin rises 10-14 days later<br>
