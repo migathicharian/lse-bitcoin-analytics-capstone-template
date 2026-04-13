@@ -35,9 +35,8 @@ plt.rcParams["savefig.dpi"] = 300
 # Global variable to store precomputed features
 _FEATURES_DF = None
 
-BACKTEST_START = "2025-01-01"
-BACKTEST_END = "2026-01-31"
-
+BACKTEST_START = "2025-04-07"
+BACKTEST_END = "2026-01-05"
 
 def compute_weights_modal(df_window: pd.DataFrame) -> pd.Series:
     """Wrapper using compute_window_weights for validation.
@@ -391,8 +390,8 @@ def run_full_analysis(
     compute_weights_fn,
     output_dir: Path | str,
     strategy_label: str = "Dynamic DCA",
-    start_date = "2025-01-01",
-    end_date = "2026-01-31",
+    start_date = "2025-04-07",
+    end_date = "2026-01-05",
 ):
     """Run full backtest analysis pipeline and generate all artifacts.
 
@@ -415,6 +414,9 @@ def run_full_analysis(
         start_date = start_date,
         end_date = end_date,
     )
+
+    print(df_spd.head())
+    print(df_spd.columns.tolist())
 
     logging.info("Running strategy validation...")
     check_strategy_submission_ready(btc_df, compute_weights_fn)
@@ -485,12 +487,16 @@ def main():
     global _FEATURES_DF
 
     logging.info("Starting Bitcoin DCA Strategy Analysis")
+    os.chdir("/Users/mig/Documents/LSE/Capstone Project/lse-bitcoin-analytics-capstone-template/eda")
     btc_df = load_data()
-    fed_signal = pd.read_csv("fed_signal.csv", header = 0)
-    fed_signal.name = 'fed_signal'
+    btc_df.index = pd.to_datetime(btc_df.index)
+    os.chdir("/Users/mig/Documents/LSE/Capstone Project/lse-bitcoin-analytics-capstone-template/template/fed rate")
+    fed_signal = pd.read_csv("fed_signal.csv", index_col=0, parse_dates=True).iloc[:, 0]
+    fed_signal.index = pd.to_datetime(fed_signal.index)
+    fed_signal.name = "fed_signal"
 
     logging.info("Precomputing features...")
-    _FEATURES_DF = precompute_features(btc_df, fed_signal['fed_signal'])
+    _FEATURES_DF = precompute_features(btc_df, fed_signal)
 
     base_dir = Path(__file__).parent.parent
     output_dir = base_dir / "output fed rate"
@@ -501,8 +507,8 @@ def main():
         compute_weights_fn=compute_weights_modal,
         output_dir=output_dir,
         strategy_label="Dynamic DCA",
-        start_date="2025-01-01",
-        end_date="2026-01-31",
+        start_date=BACKTEST_START,
+        end_date=BACKTEST_END,
     )
 
 

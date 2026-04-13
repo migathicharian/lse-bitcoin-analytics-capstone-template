@@ -15,7 +15,7 @@ PRICE_COL = "PriceUSD"
 
 # Strategy parameters
 MIN_W = 1e-6
-DYNAMIC_STRENGTH = 2.0  # Multiplier for weight adjustments
+DYNAMIC_STRENGTH = -0.25 # Multiplier for weight adjustments
 
 # Feature column names (for compatibility)
 FEATS = [
@@ -152,6 +152,7 @@ def compute_dynamic_multiplier(fed_signal: np.ndarray) -> np.ndarray:
     adjustment = np.clip(adjustment, -3, 3)
 
     multiplier = np.exp(adjustment)
+
     return np.where(np.isfinite(multiplier), multiplier, 1.0)
 
 

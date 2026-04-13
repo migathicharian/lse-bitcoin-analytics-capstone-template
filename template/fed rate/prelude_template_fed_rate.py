@@ -21,12 +21,12 @@ logging.basicConfig(
 )
 
 # Configuration
-BACKTEST_START = "2025-01-01"
-BACKTEST_END = "2026-01-31"
+BACKTEST_START = "2025-04-07"
+BACKTEST_END = "2026-01-05"
 INVESTMENT_WINDOW = 12  # months (deprecated: use WINDOW_OFFSET for consistency)
 PURCHASE_FREQ = "Daily"  # Daily frequency for DCA purchases
 # Standard 1-year window used across all modules
-WINDOW_OFFSET = pd.DateOffset(years=1)
+WINDOW_OFFSET = pd.DateOffset(months=6)
 
 PURCHASE_FREQ_TO_OFFSET = {"Daily": "1D"}
 
@@ -267,8 +267,9 @@ def compute_cycle_spd(
     Returns:
         DataFrame with SPD statistics indexed by window label
     """
-    BACKTEST_START = "2025-01-01"
-    BACKTEST_END = "2026-01-31"
+    BACKTEST_START = "2025-04-07"
+    BACKTEST_END = "2026-01-05"
+
     start = BACKTEST_START
     end = BACKTEST_END
     if end is None:
@@ -417,8 +418,8 @@ def check_strategy_submission_ready(dataframe: pd.DataFrame, strategy_function) 
     """Validate strategy: no future data, valid weights, ≥50% win rate vs uniform DCA."""
     print("Validating strategy submission readiness...")
     passed = True
-    BACKTEST_START = "2025-01-01"
-    BACKTEST_END = "2026-01-31"
+    BACKTEST_START = "2025-04-07"
+    BACKTEST_END = "2026-01-05"
 
     # Forward-leakage test
     backtest_end = BACKTEST_END 
